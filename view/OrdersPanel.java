@@ -98,7 +98,7 @@ public class OrdersPanel extends JPanel {
         }
 
         int orderid = (int) ordersTable.getValueAt(selectedRow, 0);
-        boolean update = orderDAO.update_status(newstatu , orderid);
+        boolean update = orderDAO.updateStatus(newstatu , orderid);
         if(update){
             JOptionPane.showMessageDialog(this,"Order status updated to "+ newstatu + " successfully!");
             loadOrdersBySelectedDate();

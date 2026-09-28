@@ -68,10 +68,11 @@ public class OrderDAO extends BaseDAO{
         return orders;
     }
     public int getTotaleIncomeByDate(Date date){
-        String sql = "SELECT SUM(price) AS income FROM orders WHERE order_date = ?";
+        String sql = "SELECT SUM(price) AS income FROM orders WHERE order_date = ? AND status = ? ";
         try(Connection conn = getConnection()){
             java.sql.PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setDate(1, date);
+            stmt.setString(2, "accepted");
             try(ResultSet rs = stmt.executeQuery()){
                 if(rs.next()){
                     return rs.getInt("income");
@@ -84,7 +85,7 @@ public class OrderDAO extends BaseDAO{
         return 0;
     }
 
-    public boolean update_status(String status, int id){
+    public boolean updateStatus(String status, int id){
         String sql = "UPDATE ORDERS SET status = ? WHERE id = ?";
         try(Connection conn = getConnection()){
             java.sql.PreparedStatement stmt = conn.prepareStatement(sql);

@@ -36,7 +36,7 @@ public class CreateOrderDialog extends JDialog {
         super(owner, "Create New Order", true);
 
         this.orderDAO = OrderDAO.getinstanOrderDao();
-        this.workerDAO = WorkerDAO.getinstanOrderDao();
+        this.workerDAO = WorkerDAO.getInstance();
         this.serviceDAO = ServiceDAO.getinstanServiceDAO();
 
         setSize(400, 250);

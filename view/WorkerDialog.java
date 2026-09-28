@@ -19,7 +19,7 @@ public class WorkerDialog extends JDialog {
     public WorkerDialog(Frame owner, Worker worker) {
         super(owner, worker == null ? "Add New Worker" : "Edit Worker", true);
         this.currentWorker = worker;
-        this.workerDAO = WorkerDAO.getinstanOrderDao();
+        this.workerDAO = WorkerDAO.getInstance();
 
         setSize(350, 200);
         setLocationRelativeTo(owner);

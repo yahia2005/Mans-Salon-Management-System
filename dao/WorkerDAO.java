@@ -14,7 +14,7 @@ public class WorkerDAO extends BaseDAO{
         super();
     }
 
-    public static synchronized WorkerDAO getinstanOrderDao(){
+    public static synchronized WorkerDAO getInstance(){
         if(instanWorkerDAO == null){
             instanWorkerDAO = new WorkerDAO();
         }
@@ -57,6 +57,7 @@ public class WorkerDAO extends BaseDAO{
         String sql = "SELECT * FROM workers WHERE id = ?";
         try(Connection conn = getConnection()){
             java.sql.PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, id);
             try (ResultSet rs = stmt.executeQuery()) {
             if (rs.next()) {
                 return new Worker(

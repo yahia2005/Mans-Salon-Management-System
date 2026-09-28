@@ -20,7 +20,7 @@ public class WorkersPanel extends JPanel {
     private JButton btnRefresh;
 
     public WorkersPanel() {
-        this.workerDAO = WorkerDAO.getinstanOrderDao();
+        this.workerDAO = WorkerDAO.getInstance();
         initComponents();
         loadWorkersData();
     }

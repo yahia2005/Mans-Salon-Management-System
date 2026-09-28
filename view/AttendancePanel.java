@@ -30,7 +30,7 @@ public class AttendancePanel extends JPanel {
 
     public AttendancePanel() {
         this.attendanceDAO = AttendanceDAO.getinstanOrderDao();
-        this.workerDAO = WorkerDAO.getinstanOrderDao();
+        this.workerDAO = WorkerDAO.getInstance();
         this.workerNameMap = new HashMap<>();
 
         initComponents();

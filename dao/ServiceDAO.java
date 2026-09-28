@@ -24,7 +24,7 @@ public class ServiceDAO extends BaseDAO{
         return instanServiceDAO;
     }
 
-    public boolean insert_into_service(Service service){
+    public boolean getInstance(Service service){
         String sql = "INSERT INTO service (name, price) VALUES (? , ?)" ;
         try(Connection conn = getConnection()){
             java.sql.PreparedStatement stmt = conn.prepareStatement(sql);
@@ -61,6 +61,7 @@ public class ServiceDAO extends BaseDAO{
         String sql = "SELECT * FROM service WHERE id = ?";
         try(Connection conn = getConnection()){
             java.sql.PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, id);
             try (ResultSet rs = stmt.executeQuery()) {
             if (rs.next()) {
                 return new Service(
@@ -90,7 +91,7 @@ public class ServiceDAO extends BaseDAO{
             return false;   
         }
     }
-    public boolean deletService(int id){
+    public boolean deleteService(int id){
         return deleteById("service",id);
     }
     public int getServiceId(String name){

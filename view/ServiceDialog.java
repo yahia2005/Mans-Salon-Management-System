@@ -78,7 +78,7 @@ public class ServiceDialog extends JDialog {
             boolean success;
             if (currentService == null) {
                 Service newService = new Service(0, name, price);
-                success = serviceDAO.insert_into_service(newService);
+                success = serviceDAO.getInstance(newService);
             } else {
                 currentService.setName(name);
                 currentService.setPrice(price);

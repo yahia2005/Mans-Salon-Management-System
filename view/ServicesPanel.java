@@ -149,7 +149,7 @@ public class ServicesPanel extends JPanel {
         int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this service?", "Confirm Delete", JOptionPane.YES_NO_OPTION);
 
         if (confirm == JOptionPane.YES_OPTION) {
-            boolean deleted = serviceDAO.deletService(serviceId);
+            boolean deleted = serviceDAO.deleteService(serviceId);
             if (deleted) {
                 JOptionPane.showMessageDialog(this, "Service deleted successfully!");
                 loadServicesData();

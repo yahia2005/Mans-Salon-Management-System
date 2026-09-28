@@ -94,7 +94,7 @@ public class ExpenseDAO extends BaseDAO {
             return false;
         }
     }
-    public boolean deletexpense(int id){
+    public boolean deleteExpense(int id){
         return deleteById("expenses", id);      
     }
     public int getTotalExpensesByDate(Date date){

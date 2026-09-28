@@ -152,7 +152,7 @@ public class ExpensesPanel extends JPanel {
         int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this expense?", "Confirm Delete", JOptionPane.YES_NO_OPTION);
 
         if (confirm == JOptionPane.YES_OPTION) {
-            boolean deleted = expenseDAO.deletexpense(expenseId);
+            boolean deleted = expenseDAO.deleteExpense(expenseId);
             if (deleted) {
                 JOptionPane.showMessageDialog(this, "Expense deleted successfully!");
                 loadExpensesData();

@@ -40,12 +40,3 @@ CREATE TABLE expenses (
     PRIMARY KEY(id)
 );
 
-
-
-
-
-
-
-
-
-

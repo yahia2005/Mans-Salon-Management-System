@@ -12,7 +12,7 @@ public class ExpenseDialog extends JDialog {
 
     private JTextField txtDescription;
     private JTextField txtAmount;
-    private JTextField txtDate; // بصيغة YYYY-MM-DD
+    private JTextField txtDate; 
     private JButton btnSave;
     private JButton btnCancel;
 

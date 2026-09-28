@@ -65,7 +65,7 @@ public class ServicesPanel extends JPanel {
         tableModel = new DefaultTableModel(columns, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
-                return false; // جدول غير قابل للتعديل المباشر
+                return false;
             }
         };
 

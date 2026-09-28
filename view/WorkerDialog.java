@@ -9,7 +9,7 @@ import java.awt.*;
 public class WorkerDialog extends JDialog {
 
     private JTextField txtName;
-    private JTextField txtSalary; // حقل الراتب
+    private JTextField txtSalary; 
     private JButton btnSave;
     private JButton btnCancel;
 

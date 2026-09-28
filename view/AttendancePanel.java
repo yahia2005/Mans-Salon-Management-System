@@ -25,7 +25,6 @@ public class AttendancePanel extends JPanel {
     private JButton btnLoadDate;
     private JButton btnSaveAttendance;
 
-    // الخريطة لتخزين اسم العامل مقابل معرفه (Worker ID)
     private Map<Integer, String> workerNameMap;
 
     public AttendancePanel() {

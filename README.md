@@ -8,18 +8,6 @@ A modern, full-featured Desktop Application designed for barbershop management, 
 
 ---
 
-## 📸 Screenshots
-
-| 📊 Reports & Profit Analytics | 💈 Orders & Active Services |
-| :---: | :---: |
-| ![Reports](assets/reports_screen.png) | ![Orders](assets/orders_screen.png) |
-
-| 👥 Workers & Attendance | 💸 Expenses Management |
-| :---: | :---: |
-| ![Attendance](assets/attendance_screen.png) | ![Expenses](assets/expenses_screen.png) |
-
----
-
 ## 🔥 Key Features
 
 - **📊 Live Profit & Loss Dashboard:** Instant calculation of daily revenue, total expenses, and net profit with threshold alerts.
@@ -44,4 +32,4 @@ A modern, full-featured Desktop Application designed for barbershop management, 
 
 1. **Clone the Repo**
    ```bash
-   git clone [https://github.com/YourUsername/Mans-Salon-Management-System.git](https://github.com/YourUsername/Mans-Salon-Management-System.git)
+   git clone [https://github.com/yahia2005/Mans-Salon-Management-System.git](https://github.com/yahia2005/Mans-Salon-Management-System.git)
